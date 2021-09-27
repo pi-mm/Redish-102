@@ -1,0 +1,220 @@
+<html lang="pl">
+<head>
+</head>
+<body>
+
+<style>
+
+:root {
+	b_final_x: 100;
+	b_final_y: 100;
+}
+
+@keyframes bullet_path {
+	100% { transform: translate ( var(b_final_x), var(b_final_y)); }
+}
+
+.horizontal-stripe-5 { 
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMTAnIGhlaWdodD0nNScgZmlsbD0nYmxhY2snIC8+Cjwvc3ZnPg=="); 
+	background-repeat: repeat; 
+}
+
+.horizontal-stripe-5_rev { 
+	background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgd2lkdGg9IjEwIgogICBoZWlnaHQ9IjEwIgogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmc2IgogICBzb2RpcG9kaTpkb2NuYW1lPSJnYXNpZW5uaWNhMi5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjAuOTIuMSByMTUzNzEiPgogIDxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTEyIj4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT48L2RjOnRpdGxlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZGVmcwogICAgIGlkPSJkZWZzMTAiIC8+CiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBib3JkZXJvcGFjaXR5PSIxIgogICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiCiAgICAgZ3JpZHRvbGVyYW5jZT0iMTAiCiAgICAgZ3VpZGV0b2xlcmFuY2U9IjEwIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSI5MDMiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iNzI4IgogICAgIGlkPSJuYW1lZHZpZXc4IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBpbmtzY2FwZTp6b29tPSIyMy42IgogICAgIGlua3NjYXBlOmN4PSI1IgogICAgIGlua3NjYXBlOmN5PSI1IgogICAgIGlua3NjYXBlOndpbmRvdy14PSIyMTciCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjQ3NCIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIwIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9InN2ZzYiIC8+CiAgPGcKICAgICBpZD0iZzQ0OTEiCiAgICAgdHJhbnNmb3JtPSJyb3RhdGUoMTgwLDUsNSkiPgogICAgPHJlY3QKICAgICAgIHN0eWxlPSJmaWxsOiNmZmZmZmYiCiAgICAgICB5PSItNi4xMjMwMzE4ZS0wMTYiCiAgICAgICB4PSItMy43NDkxNTE3ZS0wMzIiCiAgICAgICBpZD0icmVjdDIiCiAgICAgICBoZWlnaHQ9IjEwIgogICAgICAgd2lkdGg9IjEwIiAvPgogICAgPHJlY3QKICAgICAgIHN0eWxlPSJmaWxsOiMwMDAwMDAiCiAgICAgICB0cmFuc2Zvcm09InNjYWxlKC0xKSIKICAgICAgIGlkPSJyZWN0NCIKICAgICAgIGhlaWdodD0iNSIKICAgICAgIHdpZHRoPSIxMCIKICAgICAgIHk9Ii01IgogICAgICAgeD0iLTEwIiAvPgogIDwvZz4KPC9zdmc+Cg=="); 
+	background-repeat: repeat; 
+}
+
+.circle {
+		border-radius: 50%;
+}
+
+#arena {
+	width: 500px;
+	height: 500px;
+	overflow: hidden;
+	border-style: solid;
+}
+
+#lev1 {
+	display: table;
+	transition: transform .5s;
+	margin: 400px 200px 200px 200px;
+	transform-origin: 50% 50%;
+}
+
+#_left, #_right {
+	z-index: 1;
+	float: left;
+	width: 20px;
+	height: 100px;
+	background-color: grey;
+}
+
+#_body {
+	position: relative;
+	top: 10px;
+	float: left;
+	width: 60px;
+	height: 80px;
+	background-color: darkgreen;
+}
+
+#lev2 {
+	position: relative;
+	top: -325px;
+	transform-origin: 50% 56%;
+	transition: transform .5s;
+}
+
+#_tube {
+	width: 10px;
+	height: 50px;
+	background-color: green;
+}
+
+#_tower {
+	width: 40px;
+	height: 50px;
+	background-color: orange;
+}
+
+#_circle {
+	position: relative;
+	top: -35px;
+	width: 25px;
+	height: 25px;
+	background-color: red;
+	border-radius: 50%;
+}
+
+#_bullet {
+	width: 10px;
+	height: 10px;
+	background-color: red;
+}
+	
+</style>
+
+<script>
+lev1_angle=0;
+lev2_angle=0;
+step=5;
+move=10;
+
+lev1_x=0;
+lev1_y=0;
+
+anim=-1;
+
+function draw () {
+
+	if (lev1_x > 200) lev1_x=200;
+	if (lev1_x < -200) lev1_x=-200;
+	if (lev1_y > 400) lev1_y=400;
+	if (lev1_y < 0) lev1_y=0;
+
+	anim = anim * (-1);
+	console.log(anim);
+		
+	if (anim==1) {
+		document.getElementById("_left").className = "horizontal-stripe-5";
+		document.getElementById("_right").className = "horizontal-stripe-5_rev";
+	}
+	else {
+		document.getElementById("_left").className = "horizontal-stripe-5_rev";
+		document.getElementById("_right").className = "horizontal-stripe-5";
+	}
+
+	document.getElementById("lev1").style.transform = "translate(" + lev1_x + "px, -" + lev1_y + "px) rotate(" + lev1_angle + "deg)";
+	document.getElementById("lev2").style.transform = "translate(" + lev1_x + "px, -" + lev1_y + "px) rotate(" + lev2_angle + "deg)";
+	document.getElementById("angle1").value = lev1_angle;
+	document.getElementById("angle2").value = lev2_angle;
+	document.getElementById("pos_x").value = lev1_x;
+	document.getElementById("pos_y").value = lev1_y;
+}
+
+	document.addEventListener('keydown', function(event) {
+		//alert(event.keyCode);
+	
+		if(event.keyCode == 37) { //left
+			lev1_angle-=step;
+			draw();
+		}
+		else if(event.keyCode == 39) { //right
+			lev1_angle+=step;
+			draw();
+		}
+		else if(event.keyCode == 81) { //q
+			lev2_angle-=step;
+			draw();
+		}
+		else if(event.keyCode == 87) { //w
+			lev2_angle+=step;
+			draw();
+		}
+		else if(event.keyCode == 38) { //forward
+			d_x=move*Math.sin( lev1_angle * Math.PI / 180 );
+			d_y=move*Math.cos( lev1_angle * Math.PI / 180 );
+			lev1_x += d_x;
+			lev1_y += d_y;
+			
+			draw();
+		}
+		else if(event.keyCode == 40) { //back
+		
+		d_x=move*Math.sin( lev1_angle * Math.PI / 180 );
+			d_y=move*Math.cos( lev1_angle * Math.PI / 180 );
+			lev1_x -= d_x;
+			lev1_y -= d_y;
+		
+			draw();
+		}
+		
+		
+		
+	});
+
+draw();	
+	
+</script>
+
+<center>
+
+<div id="arena">
+
+	<div id="lev1">
+		<div id="_left" class="horizontal-stripe-5_rev"> </div>
+		<div id="_body"> </div>
+		<div id="_right" class="horizontal-stripe-5_rev"> </div>
+	</div>
+
+	<div id="lev2">
+		<div id="_bullet" class="circle"> </div>
+		<div id="_tube"> </div>
+		<div id="_tower"> </div>	
+		<div id="_circle" class="circle"> </div>
+	</div>
+
+</div>
+
+<br>
+
+<label for="angle1">kąt Pod. :</label>
+<input type="text" id="angle1" name="angle1"> 
+ 
+<label for="angle2">kąt Wież. :</label> 
+<input type="text" id="angle2" name="angle2"> <br>
+
+<br>
+
+<label for="pos_x">X: </label>
+<input type="text" id="pos_x" name="pos_x">
+
+<label for="pos_y">Y: </label>
+<input type="text" id="pos_y" name="pos_y">
+
+	
+</center>
+
+</body>
+</html>
